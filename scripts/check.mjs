@@ -62,10 +62,12 @@ for (const extra of ['Kasi Yatra', 'Oonjal']) {
 }
 }
 // Hero + footer name blocks: standalone centered ampersands, no shared name elements.
-(html.includes('amp-own-line') && html.includes('footer-amp'))
-  ? ok('standalone ampersand blocks present (hero + footer)') : fail('ampersand blocks missing');
-(html.includes('data-field="groomTamil"') && main.includes("setText('groomTamil'"))
-  ? ok('footer Tamil names hydrated from data') : fail('footer Tamil hydration missing');
+(html.includes('bless-names') && html.includes('bless-amp') && !html.includes('bless-sign'))
+  ? ok('blessings signature uses stacked blocks (no inline ampersand)') : fail('blessings signature incorrect');
+(html.includes('couple-tamil') && html.includes('amp-own-line'))
+  ? ok('hero shows Tamil names with standalone ampersand') : fail('hero name block incorrect');
+(html.includes('footer-amp') && !html.includes('data-field="groomTamil"') && !html.includes('data-field="brideTamil"'))
+  ? ok('footer uses stacked English names with no Tamil slots') : fail('footer name block incorrect');
 (css.includes('.couple-name') && css.includes('white-space: nowrap'))
   ? ok('name lines protected from wrapping') : fail('name nowrap guards missing');
 // Single venue card with one location button opening the exact client-provided link.

@@ -21,8 +21,6 @@ setText('weddingDate', wedding.weddingDateDisplay);
 setText('muhurtham', wedding.muhurtham);
 setText('blessings', wedding.blessings.text);
 setText('footerLine', wedding.footerLine);
-setText('groomTamil', wedding.groom.tamil);
-setText('brideTamil', wedding.bride.tamil);
 
 /* ── family invitation ── */
 $('#invitationBody').innerHTML = wedding.invitation.body
