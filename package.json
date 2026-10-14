@@ -1,0 +1,16 @@
+{
+  "name": "manoj-ramyabharathi-wedding-invitation",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Premium vintage-botanical wedding e-invitation — Manoj Karthick & Ramyabharathi",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "node ./scripts/check.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
