@@ -14,7 +14,7 @@
 
 export const wedding = {
   groom: {
-    name: 'K.R. Manoj Karthick',
+    name: 'K.R. Manoj Kaarthick',
     tamil: 'மனோஜ் கார்த்திக்' // VERIFY — transliteration, confirm from PDF
   },
   bride: {
@@ -78,10 +78,10 @@ export const wedding = {
     greeting: 'With the Divine Blessings of Our Elders',
     tamilGreeting: 'பெரியோர்களின் நல்லாசியுடன்', // VERIFY
     body: [
-      'With the blessings of our beloved elders and families, we warmly invite you to join us in celebrating the wedding of K.R. Manoj Karthick and S. Ramyabharathi.'
+      'With the blessings of our beloved elders and families, we warmly invite you to join us in celebrating the wedding of K.R. Manoj Kaarthick and S. Ramyabharathi.'
     ],
     families: [
-      { label: 'Groom’s Family', names: 'Family of Mr. K.R. Manoj Karthick' }, // VERIFY — parents' names from PDF
+      { label: 'Groom’s Family', names: 'Family of Mr. K.R. Manoj Kaarthick' }, // VERIFY — parents' names from PDF
       { label: 'Bride’s Family', names: 'Family of Ms. S. Ramyabharathi' } // VERIFY — parents' names from PDF
     ]
   },
@@ -92,7 +92,7 @@ export const wedding = {
     text: 'Your presence and blessings will make our celebration even more special.'
   },
 
-  footerLine: 'With Love, K.R. Manoj Karthick & S. Ramyabharathi',
+  footerLine: 'With Love, K.R. Manoj Kaarthick & S. Ramyabharathi',
 
   // Client-provided exact mahal location (Priya Mahal).
   // Every "View Location" button on the site must open this exact link —

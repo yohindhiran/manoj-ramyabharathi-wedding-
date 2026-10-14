@@ -51,7 +51,7 @@ for (const extra of ['Kasi Yatra', 'Oonjal']) {
   found.length ? fail(`stale theme/date remnants: ${found.join(', ')}`) : ok('no burgundy / red / old-date remnants');
 // Corrected details must be present everywhere they appear.
 {
-  const names = (sources.match(/K\.R\. Manoj Karthick/g) || []).length;
+  const names = (sources.match(/K\.R\. Manoj Kaarthick/g) || []).length;
   const bride = (sources.match(/S\. Ramyabharathi/g) || []).length;
   const morning = (sources.match(/Wedding Morning: 6:00 AM – 7:30 AM/g) || []).length;
   const mahal = (sources.match(/Priya Mahal/g) || []).length;
@@ -61,6 +61,13 @@ for (const extra of ['Kasi Yatra', 'Oonjal']) {
   mahal >= 4 ? ok(`Priya Mahal venue present (${mahal} refs)`) : fail(`Priya Mahal refs: ${mahal}`);
 }
 }
+// Hero + footer name blocks: standalone centered ampersands, no shared name elements.
+(html.includes('amp-own-line') && html.includes('footer-amp'))
+  ? ok('standalone ampersand blocks present (hero + footer)') : fail('ampersand blocks missing');
+(html.includes('data-field="groomTamil"') && main.includes("setText('groomTamil'"))
+  ? ok('footer Tamil names hydrated from data') : fail('footer Tamil hydration missing');
+(css.includes('.couple-name') && css.includes('white-space: nowrap'))
+  ? ok('name lines protected from wrapping') : fail('name nowrap guards missing');
 // Single venue card with one location button opening the exact client-provided link.
 ((main.includes('venue-grid') || html.includes('venueGrid')) && main.includes('wedding.venueMapsLink'))
   ? ok('single common venue card with one location button') : fail('venue card incorrect');

@@ -161,15 +161,13 @@ a:focus-visible, button:focus-visible {
   font-family: var(--font-script); text-transform: none; letter-spacing: 0;
   font-size: 1.35em; color: var(--champagne); display: inline-block; margin-top: 0.1em;
 }
-.couple { margin: 1.2rem 0 0; }
+.couple { margin: 1.2rem 0 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .couple-name {
-  font-family: var(--font-script); font-size: clamp(2.4rem, 9vw, 4.2rem);
-  line-height: 1.1; color: var(--ivory); margin: 0; text-wrap: balance;
+  font-family: var(--font-script); font-size: clamp(1.6rem, 8vw, 4.2rem);
+  line-height: 1.15; color: var(--ivory); margin: 0; white-space: nowrap;
 }
 .couple-tamil { color: var(--blush-soft); margin: 0.1rem 0 0; font-size: clamp(0.95rem, 3.4vw, 1.1rem); }
-.ampersand { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin: 0.35rem 0; }
-.amp-line { width: 120px; stroke: var(--gold); stroke-width: 1; }
-.amp-char { font-family: var(--font-script); font-size: 1.9rem; color: var(--gold); }
+.amp-own-line { font-family: var(--font-script); font-size: clamp(1.8rem, 7vw, 2.6rem); line-height: 1; color: var(--gold); text-align: center; margin: 0.55rem 0 0.45rem; }
 .divider svg { width: 220px; stroke: var(--gold); stroke-width: 1; fill: var(--gold); margin: 1rem auto 0; display: block; }
 .hero-date { font-family: var(--font-serif); font-size: clamp(1.15rem, 4.4vw, 1.5rem); color: var(--champagne); letter-spacing: 0.06em; margin: 1rem 0 0.15rem; }
 .hero-muhurtham { font-size: 0.85rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(248, 242, 228, 0.85); margin: 0; }
@@ -296,8 +294,8 @@ a:focus-visible, button:focus-visible {
   background-repeat: no-repeat; background-position: top center; background-size: min(100%, 640px) auto;
 }
 .footer-mono { font-family: var(--font-serif); color: var(--gold); letter-spacing: 0.4em; margin: 0; font-size: 0.85rem; }
-.footer-names { font-family: var(--font-script); font-size: clamp(1.9rem, 6vw, 2.6rem); color: var(--ivory); margin: 0.4rem 0 0; }
-.footer-names em { color: var(--gold); }
+.footer-names { font-family: var(--font-script); font-size: clamp(1.9rem, 6vw, 2.6rem); color: var(--ivory); margin: 0.4rem 0 0; white-space: nowrap; }
+.footer-amp { font-family: var(--font-script); font-size: clamp(1.6rem, 6vw, 2.2rem); line-height: 1; color: var(--gold); margin: 0.35rem 0 0.15rem; }
 .footer-line { font-family: var(--font-serif); font-style: italic; color: var(--blush-soft); margin: 0.4rem 0 0; }
 .footer-date { font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(248,242,228,.65); margin: 0.6rem 0 0; }
 .footer-links { margin-top: 1.2rem; display: flex; gap: 0.7rem; justify-content: center; align-items: center; flex-wrap: wrap; }
@@ -318,9 +316,10 @@ a:focus-visible, button:focus-visible {
   .brand-mark { width: 30px; height: 30px; }
   .brand-names {
     white-space: normal; overflow: visible; text-overflow: clip;
-    text-align: center; line-height: 1.3;
-    font-size: clamp(1.02rem, 5vw, 1.3rem);
+    text-align: center; line-height: 1.45;
+    font-size: clamp(0.95rem, 4.6vw, 1.3rem);
   }
+  .brand-line { display: block; white-space: nowrap; }
 
   .event-grid, .venue-grid { grid-template-columns: 1fr; }
   .family-grid { grid-template-columns: 1fr; }
