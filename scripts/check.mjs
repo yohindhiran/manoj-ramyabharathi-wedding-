@@ -45,14 +45,26 @@ for (const extra of ['Kasi Yatra', 'Oonjal']) {
   const sources = html + css + data + main + readFileSync('public/assets/emblem.svg', 'utf8');
   const stale = ['burgundy', 'maroon', 'wine-', 'rosegold', 'rose-gold', '#4A0710', '#350409',
     '#650D1B', '#B78A72', '#F8F0E5', '#E8D6BD', '#D9B9B0', '#96644E',
-    'btn-champagne', 'eyebrow wine', 'eyebrow rose', 'February 2026', '8th February'];
+    'btn-champagne', 'eyebrow wine', 'eyebrow rose', 'February 2026', '8th February',
+    'gyKpzRQk91yKZ1fo2', 'Lakshmi', 'Tambaram', '9:30 AM', 'Muhurtham 9:30'];
   const found = stale.filter((s) => sources.toLowerCase().includes(s.toLowerCase()));
   found.length ? fail(`stale theme/date remnants: ${found.join(', ')}`) : ok('no burgundy / red / old-date remnants');
+// Corrected details must be present everywhere they appear.
+{
+  const names = (sources.match(/K\.R\. Manoj Karthick/g) || []).length;
+  const bride = (sources.match(/S\. Ramyabharathi/g) || []).length;
+  const morning = (sources.match(/Wedding Morning: 6:00 AM – 7:30 AM/g) || []).length;
+  const mahal = (sources.match(/Priya Mahal/g) || []).length;
+  names >= 6 ? ok(`groom name with initials present (${names} refs)`) : fail(`groom name refs: ${names}`);
+  bride >= 6 ? ok(`bride name with initial present (${bride} refs)`) : fail(`bride name refs: ${bride}`);
+  morning >= 3 ? ok(`wedding morning timing present (${morning} refs)`) : fail(`wedding morning refs: ${morning}`);
+  mahal >= 4 ? ok(`Priya Mahal venue present (${mahal} refs)`) : fail(`Priya Mahal refs: ${mahal}`);
+}
 }
 // Single venue card with one location button opening the exact client-provided link.
 ((main.includes('venue-grid') || html.includes('venueGrid')) && main.includes('wedding.venueMapsLink'))
   ? ok('single common venue card with one location button') : fail('venue card incorrect');
-(data.includes('https://share.google/gyKpzRQk91yKZ1fo2'))
+(data.includes('maps/place/Priya+Mahal/') && data.includes('0x3a52e1bf6d989cf1'))
   ? ok('exact client mahal link stored in wedding data') : fail('client mahal link missing from data');
 // Every location button must use the exact link — no query-built or guessed Maps URLs.
 {

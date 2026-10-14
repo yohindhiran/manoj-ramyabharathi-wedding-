@@ -14,21 +14,21 @@
 
 export const wedding = {
   groom: {
-    name: 'Manoj Karthick',
+    name: 'K.R. Manoj Karthick',
     tamil: 'மனோஜ் கார்த்திக்' // VERIFY — transliteration, confirm from PDF
   },
   bride: {
-    name: 'Ramyabharathi',
+    name: 'S. Ramyabharathi',
     tamil: 'ரம்யபாரதி' // VERIFY — transliteration, confirm from PDF
   },
 
   // Client update: the wedding date is 16 November 2026.
-  // VERIFY — muhurtham TIME below is carried over from prior data and is
-  // NOT verified. Confirm the exact muhurtham time from the client PDF.
-  weddingDateISO: '2026-11-16T09:30:00+05:30', // VERIFY time — date per client
+  // Client update: wedding morning 6:00 AM – 7:30 AM (replaces the earlier
+  // unverified muhurtham time). Countdown targets the 6:00 AM start.
+  weddingDateISO: '2026-11-16T06:00:00+05:30', // client-provided date & time
   weddingDateDisplay: 'Monday, 16th November 2026',
   weddingDateTamil: 'திங்கட்கிழமை, 16 நவம்பர் 2026', // VERIFY
-  muhurtham: 'Muhurtham 9:30 AM – 11:00 AM', // VERIFY — time not confirmed
+  muhurtham: 'Wedding Morning: 6:00 AM – 7:30 AM', // client-provided
 
   events: [
     {
@@ -38,10 +38,10 @@ export const wedding = {
       tamilName: 'வரவேற்பு', // VERIFY wording
       date: 'Sunday, 15th November 2026', // VERIFY — assumed eve-of-wedding, confirm from PDF
       time: '6:30 PM onwards', // VERIFY
-      venue: 'Sri Lakshmi Kalyana Mandapam', // VERIFY — venue name
+      venue: 'Priya Mahal', // client-provided
       address:
-        'No. 12, GST Road, Tambaram, Chennai – 600 045, Tamil Nadu', // VERIFY — full address
-      mapsQuery: 'Sri Lakshmi Kalyana Mandapam Tambaram Chennai', // VERIFY — drives the Maps link
+        '542/2, Malliankaranai Rd, Tk Pattankulam, Uthiramerur, Malliankaranai, Tamil Nadu 603406', // client-provided
+      mapsQuery: 'Priya Mahal Uthiramerur', // informational only — buttons use venueMapsLink
       note: 'Dinner to follow'
     },
     {
@@ -50,11 +50,11 @@ export const wedding = {
       name: 'Wedding Ceremony',
       tamilName: 'திருக்கல்யாணம்', // VERIFY wording
       date: 'Monday, 16th November 2026', // VERIFY — date per client, confirm from PDF
-      time: 'Muhurtham 9:30 AM – 11:00 AM', // VERIFY
-      venue: 'Sri Lakshmi Kalyana Mandapam', // VERIFY — venue name
+      time: 'Wedding Morning: 6:00 AM – 7:30 AM', // client-provided
+      venue: 'Priya Mahal', // client-provided
       address:
-        'No. 12, GST Road, Tambaram, Chennai – 600 045, Tamil Nadu', // VERIFY — full address
-      mapsQuery: 'Sri Lakshmi Kalyana Mandapam Tambaram Chennai', // VERIFY
+        '542/2, Malliankaranai Rd, Tk Pattankulam, Uthiramerur, Malliankaranai, Tamil Nadu 603406', // client-provided
+      mapsQuery: 'Priya Mahal Uthiramerur', // informational only — buttons use venueMapsLink
       note: 'Followed by festive lunch'
     }
   ],
@@ -67,7 +67,7 @@ export const wedding = {
       detail: 'Evening reception with dinner for family and friends.'
     },
     {
-      time: 'Mon 16th Nov · 9:30 AM',
+      time: 'Mon 16th Nov · 6:00 AM',
       title: 'Muhurtham — Thali Tying',
       detail: 'The sacred knot is tied amidst chanting and blessings.'
     }
@@ -78,11 +78,11 @@ export const wedding = {
     greeting: 'With the Divine Blessings of Our Elders',
     tamilGreeting: 'பெரியோர்களின் நல்லாசியுடன்', // VERIFY
     body: [
-      'With the blessings of our beloved elders and families, we warmly invite you to join us in celebrating the wedding of Manoj Karthick and Ramyabharathi.'
+      'With the blessings of our beloved elders and families, we warmly invite you to join us in celebrating the wedding of K.R. Manoj Karthick and S. Ramyabharathi.'
     ],
     families: [
-      { label: 'Groom’s Family', names: 'Family of Mr. Manoj Karthick' }, // VERIFY — parents' names from PDF
-      { label: 'Bride’s Family', names: 'Family of Ms. Ramyabharathi' } // VERIFY — parents' names from PDF
+      { label: 'Groom’s Family', names: 'Family of Mr. K.R. Manoj Karthick' }, // VERIFY — parents' names from PDF
+      { label: 'Bride’s Family', names: 'Family of Ms. S. Ramyabharathi' } // VERIFY — parents' names from PDF
     ]
   },
 
@@ -92,10 +92,10 @@ export const wedding = {
     text: 'Your presence and blessings will make our celebration even more special.'
   },
 
-  footerLine: 'With Love, Manoj Karthick & Ramyabharathi',
+  footerLine: 'With Love, K.R. Manoj Karthick & S. Ramyabharathi',
 
-  // Client-provided exact mahal location (Nov 2026 update).
+  // Client-provided exact mahal location (Priya Mahal).
   // Every "View Location" button on the site must open this exact link —
   // do NOT replace it with a search URL or a guessed address.
-  venueMapsLink: 'https://share.google/gyKpzRQk91yKZ1fo2'
+  venueMapsLink: 'https://www.google.com/maps/place/Priya+Mahal/@12.9186431,78.9581877,8z/data=!4m10!1m2!2m1!1sPriya+Mahal!3m6!1s0x3a52e1bf6d989cf1:0x4fe39b0037d2d025!8m2!3d12.6155175!4d79.7934718!15sCgtQcml5YSBNYWhhbFoNIgtwcml5YSBtYWhhbJIBDGJhbnF1ZXRfaGFsbOABAA!16s%2Fg%2F11kr7cxk5m?entry=ttu&g_ep=EgoyMDI2MTAxMS4wIKXMDSoASAFQAw%3D%3D'
 };

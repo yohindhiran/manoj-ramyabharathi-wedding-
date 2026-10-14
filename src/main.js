@@ -73,7 +73,7 @@ $('#venueGrid').innerHTML = `
       <h3>${esc(mahal.venue)}</h3>
       <address>${esc(mahal.address)}</address>
       <p class="venue-when">Reception — ${esc(reception.date)} · ${esc(reception.time)}</p>
-      <p class="venue-when">Muhurtham — ${esc(ceremony.date)} · ${esc(ceremony.time)}</p>
+      <p class="venue-when">Wedding — ${esc(ceremony.date)} · ${esc(ceremony.time)}</p>
       <a class="btn btn-gold" href="${wedding.venueMapsLink}" target="_blank" rel="noopener noreferrer">View Location</a>
     </article>`;
 
